@@ -4,29 +4,29 @@
 
 package frc.robot.subsystems.intake;
 
-import org.littletonrobotics.junction.AutoLog;
 import com.ctre.phoenix6.signals.NeutralModeValue;
+import org.littletonrobotics.junction.AutoLog;
 
 /** Add your docs here. */
 public interface IntakeIO {
-    @AutoLog
-    public static class IntakeIOInputs{
+  @AutoLog
+  public static class IntakeIOInputs {
 
-        public double leftPivotPos = 0.0;
-        public double rightPivotPos = 0.0;
+    public double leftPivotPos = 0.0;
+    public double rightPivotPos = 0.0;
 
-        public double feederRightVel = 0.0;
-        public double feederLeftVel = 0.0;
-        public double feederCurrent = 0.0;
-    }
-    
-    public default void updateInputs(IntakeIOInputs inputs) {}
+    public double feederRightVel = 0.0;
+    public double feederLeftVel = 0.0;
+    public double feederCurrent = 0.0;
+  }
 
-    public default void setPivotNeutralMode(NeutralModeValue mode){}
+  public default void updateInputs(IntakeIOInputs inputs) {}
 
-    public default void setPivotPosition(double posLeft, double posRight){}
+  public default void setPivotNeutralMode(NeutralModeValue mode) {}
 
-    public default void setFeederVelocity(double velocity) {}
+  public default void setPivotPosition(double posLeft, double posRight) {}
 
-    public default void setFeederDutyCycle(double percentOut) {}
+  public default void setFeederVelocity(double velocity) {}
+
+  public default void setFeederDutyCycle(double percentOut) {}
 }
